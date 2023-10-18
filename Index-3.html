@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+	  <title>My Web</title>
+      <link rel="stylesheet" href="Index.css">
+      <link rel="icon" type="image/x-icon" href="Image/favicon.png">
+      <!---<script src="Index.js"> </i>-->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="https://kit.fontawesome.com/ebf3171982.js" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+	</head>
+	<body>
+		<div class="contentloader" id="contentloader">
+      <div class="loader"></div>
+    </div>
+    <div class="head">
+      <p>Juvance Website</p>
+    </div>
+    <ul>
+      <li><a href="Index.html" class="active"><i class="fa-solid fa-house" title="Home"></i></i></a></li>
+      <li><a href="Index-2.html"><i class="fa-solid fa-photo-film" title="Media"></i></a></li>
+      <li><a href="Index-3.html"><i class="fa-solid fa-user" title="Profil"></i></a></li>
+      <li><a href="Index-4.html"><i class="fa-solid fa-file" title="Tools"></i></a></li>
+      <li><a href="Index-5.html"><i class="fa-solid fa-pen-to-square" title="Info"></i></a></li>
+    </ul>
+    <section class="content">
+      <div class="dashboard">
+			  <div class="title"><i class="fa-solid fa-calendar-day"></i>Programs</div>
+			  <li><a><i class="fa-solid fa-house-chimney"></i>Home</a></li>
+			  <li><a><i class="fa-solid fa-user"></i>Profil</a></li>
+			  <li><a><i class="fa-solid fa-user-tie"></i>Assign</a></li>
+			  <li><a><i class="fa-solid fa-magnifying-glass-chart"></i>Analitic</a></li>
+			  <li><a><i class="fa-solid fa-list-check"></i>Task</a></li>
+			  <li><a><i class="fa-solid fa-gear"></i>Setting</a></li>
+			  <li><a><i class="fa-solid fa-question"></i>Help</a></li>
+		  </div>
+		  <div class="dashboardcontent">
+			  <h1>Home</h1>
+			  <div class="taskcontener">
+			    <div class="task">
+					  <i class="fa-solid fa-calendar-check"></i>
+				    <h2>Anjara</h2>
+					  <p>Ty anjarako amy Fiv</p>
+					  <button>Find Out</button>
+			    </div>
+			    <div class="task">
+					<i class="fa-solid fa-person"></i>
+				    <h2>Pro Personal</h2>
+					<p>Program manokagne</p>
+					<button>Find Out</button>
+			    </div>
+			    <div class="task">
+					<i class="fa-solid fa-utensils"></i>
+				    <h2>Loisir</h2>
+					<p>Fihisagne</p>
+					<button>Find Out</button>
+			    </div>
+			    <div class="task">
+					<i class="fa-solid fa-people-roof"></i>
+				    <h2>Family</h2>
+					<p>Fianakaviagne</p>
+					<button>Find Out</button>
+			    </div>
+			  </div>
+			  <h1>Development</h1>
+		    <div class="workdone">
+				  <div class="work-p">
+						<p>In progress</p>
+						<p>Explore</p>
+						<p>Incoming</p>
+						<p>Finished</p>
+					</div>
+					<div class="progress">
+						<span>
+							<h2>Anjara</h2>
+					    <p>Ty anjarako amy Fiv</p>
+					    <button>Verify</button>
+							<i class="fa-solid fa-calendar-check"></i>
+						</span>
+						<span>
+							<h2>Pro Personal</h2>
+					    <p>Program manokagne</p>
+					    <button>Verify</button>
+							<i class="fa-solid fa-person"></i>
+						</span>
+						<span>
+							<h2>Loisir</h2>
+					    <p>Fihisagne</p>
+					    <button>Verify</button>
+							<i class="fa-solid fa-utensils"></i>
+						</span>
+						<span>
+							<h2>Family</h2>
+					    <p>Fianakaviagne</p>
+					    <button>Verify</button>
+							<i class="fa-solid fa-people-roof"></i>
+						</span>
+					</div>
+		 	  </div>
+		  </div>
+    </section>
+		<script>
+        document.onreadystatechange = () => {
+        if (document.readyState === "complete"){
+            document.getElementById("contentloader").style.display = "none";
+            setTimeout(function(){
+                document.getElementById("contentloader").style.display = "none";
+            }, 1000)
+            }
+        };
+    </script>
+  </body>
+</html>

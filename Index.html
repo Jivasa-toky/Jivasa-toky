@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+        <html lang="en-us">
+	<head>
+	    <title>My Web</title>
+                <link rel="stylesheet" href="Index.css">
+                <link rel="icon" type="image/x-icon" href="Image/favicon.png">
+                <!---<script src="Index.js">-->
+                <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <script src="https://kit.fontawesome.com/ebf3171982.js" crossorigin="anonymous"></script>
+                <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+	</head>
+	<body>
+            <div class="contentloader" id="contentloader">
+                <div class="loader"></div>
+                </div>
+                <div class="head">
+                    <p>Juvance Website</p>
+                </div>
+                <i class="fa-solid fa-bars" id="bars"></i>
+               <div class="hero-image">
+                    <div id="hero-text"></div>
+               </div>
+               <script>
+                    function clock(){
+                       let date = new Date();
+                       let h = date.getHours();
+                        let m = date.getMinutes();
+                        let s = date.getSeconds();
+
+                        ( h < 10) ? h = "0" + h: h;
+                        ( m < 10) ? m = "0" + m: m;
+                        ( s < 10) ? s = "0" + s: s;      
+
+                        document.getElementById("hero-text").innerHTML = h + ":" + m + ":" + s;
+                   }
+                   clock();
+
+                   setInterval(clock, 1000);
+               </script>
+               <section>
+                       <ul>
+                               <li><a href="Index.html" class="active"><i class="fa-solid fa-house" title="Home"></i></i></a></li>
+                               <li><a href="Index-2.html"><i class="fa-solid fa-photo-film" title="Media"></i></a></li>
+                               <li><a href="Index-3.html"><i class="fa-solid fa-user" title="Profil"></i></a></li>
+                               <li><a href="Index-4.html"><i class="fa-solid fa-file" title="Tools"></i></a></li>
+                               <li><a href="Index-5.html"><i class="fa-solid fa-pen-to-square" title="Info"></i></a></li>
+                               <span class="close" id="close">Close</span>
+                       </ul>
+               </section>
+               <section>
+                        <div class="content-2">
+                              <div>CARD
+                                      <img src = "Image/WIN_20210331_09_57_01_Pro1.jpg">
+                              </div>
+                              <div>CARD
+                                      <img src = "Image/WIN_20210331_09_57_01_Pro1.jpg">
+                              </div>
+                              <div>CARD
+                                      <img src = "Image/WIN_20210331_09_57_01_Pro1.jpg">
+                              </div>
+                        </div>
+               </section>
+              <script>
+                   document.onreadystatechange = () => {
+                      if (document.readyState === "complete"){
+                              document.getElementById("contentloader").style.display = "none";
+                              setTimeout(function(){
+                                document.getElementById("contentloader").style.display = "none";
+                              }, 1000)
+                      }
+                   };
+
+                   let bars = document.getElementById("bars");
+                   let close = document.getElementById("close");
+                   let ul = document.querySelector("ul");
+
+                   bars.addEventListener("click", function(){
+                           ul.style.display = "flex";
+                   });
+                   close.addEventListener("click", function(){
+                           ul.style.display = "none";
+                   });
+              </script>
+		
+	</body>
+</html>

@@ -1,0 +1,723 @@
+body 
+{
+    max-width: 1000vh;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: #111;
+}
+
+/*html::-webkit-scrollbar {
+      width: 15px; 
+}
+
+html::-webkit-scrollbar-track {
+  	background: #ffffff;
+    border: 0.1vw dotted grey;
+  	background-size: 10px 10px;
+    border-radius: 0 10px 10px 0;
+}
+html::-webkit-scrollbar-thumb {
+    background: #33cccc;
+    border-radius: 10px;
+    border: 4px solid #ffffff;
+    width: 5px; 
+}
+
+html::-webkit-scrollbar-thumb:active {
+    background: red;
+    border-radius: 10px;
+}*/
+
+.contentloader {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    background: #ffffff;
+    z-index: 10;
+}
+
+.loader{
+    border: 1vw solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 1vw solid #33cccc;
+    width: 5vw;
+    height: 5vw;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+@-webkit-keyframes spin {
+    0% {-webkit-transform: rotate(0deg);}
+    100% {-webkit-transform: rotate(360deg);}
+}
+
+@keyframes spin {
+    0% {-webkit-transform: rotate(0deg);}
+    100% {-webkit-transform: rotate(360deg);}
+}
+
+.head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8em;
+    border-top: 1px dotted #33cccc;
+}
+
+.head p
+{
+    display: block;
+    color: #ffffff;
+    position: relative;
+    font-size: 2.5em;
+    font-weight: bold;
+    font-family: "Sofia", sans-serif;
+    text-shadow: -1px 0 #33cccc, 0 1px #33cccc, 1px 0 #33cccc, 0 -1px #33cccc;
+}
+
+.fa-bars{
+    display: none;
+    color: #111;
+}
+
+.hero-image
+{
+    background-image: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5) ), url("Image/WIN_20210331_09_57_01_Pro1.jpg");
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    object-fit: cover;
+}
+
+#hero-text
+{
+    color: #ffffff;
+    position:  absolute;
+    right: 1vw;
+    bottom: 1vw;
+    font-size: 2vw;
+}
+
+ul
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #111;
+    border: 1px dotted #33cccc;
+    position: relative;
+}
+
+li
+{
+    float: left;
+}
+
+li a
+{
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    padding: 16px 16px;
+
+}
+
+li a .fa-regular, .fa-solid{
+    font-size: 1.2em;
+}
+
+li a:hover
+{
+    transform: scale(0.9 ,0.9);
+}
+
+.active
+{
+    color: #ffffff;
+}
+
+.content-2
+{
+    height: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2vw 0 2vw 0;
+    margin: 0;
+}
+
+.content-2 div
+{
+    /*background-color: rgb(255, 153, 204);*/
+    margin-right: 2vw;
+    display: block;
+    height: 30%;
+    width: 25%;
+    border: 0.5vw solid #ffffff;
+    /*border-radius: 10px;*/
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.content-2 div img
+{
+    object-fit: cover;
+    width: 90%; 
+}
+
+/*-------------- Index-2 content --------------------*/
+
+.galley-content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.fa-photo-film{
+    position: relative;
+}
+
+.fa-film{
+    color: #33cccc;
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    font-size: 2em;
+
+}
+
+.fa-camera{
+    color: #f3f3f3;
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    font-size: 2em;
+}
+
+.galley-content .content-index-2{
+    width: 100%;
+    max-width: 90%;
+    padding: 1em;
+}
+
+.galley-content .content-index-2 img{
+    width: 10%;
+    height: 10%;
+    margin: 10px;
+    cursor: pointer;
+    padding: 0;
+    border: 1px dotted #33cccc;
+}
+
+.galley-content .content-index-2 img:hover{
+    transform: scale(0.9 ,0.9);
+}
+
+.content-Extra
+{
+    z-index: 5;
+    background-color:rgba(0,0,0,0.9);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    
+}
+
+.content-Extra img
+{
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+}
+
+.content-Extra .fa-chevron-right
+{
+    position : absolute;
+    right : 2em;
+    font-size: 20px;
+    padding: 10px 10px;
+    cursor: pointer;
+}
+
+.content-Extra .fa-xmark
+{
+    font-size: 25px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 10px 10px;
+    cursor: pointer;
+    z-index: 2;
+    color: #ffffff;
+}
+
+.fa-xmark:hover{
+    background-color : rgba(255, 255, 255, 0.2);
+}
+
+.content-Extra .fa-chevron-left
+{
+    position : absolute;
+    left : 2em;
+    font-size: 20px;
+    padding: 10px 10px;
+    cursor: pointer;
+}
+
+.content-Extra .imgIndex{
+    position: absolute;
+    top: 15px;
+}
+
+.content-Extra .fa-chevron-left:hover, .fa-chevron-right:hover
+{
+    background-color : rgba(255, 255, 255, 0.2);
+}
+
+.content-index-3{
+   display: none;
+   flex: 90%;
+   max-width: 90%;
+   flex-wrap: wrap;
+}
+
+.content-index-3 .minVideoClass{
+    height: 20%;
+    width: 20%;
+    margin: 10px;
+    position: relative;
+    border: 1px dotted #33cccc;
+}
+
+.content-index-3 .minVideoClass video{
+   object-fit: cover;
+   width: 100%;
+   height: 100%;
+   cursor: pointer;
+}
+
+.content-index-3 .minVideoClass .fa-play{
+    color: #33cccc;
+    position: absolute;
+    font-size: 20px;
+    bottom: 0;
+    left: 0;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.content-index-3 .minVideoClass .time{
+    font-size: 12px;
+    background: #33cccc;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    margin: 5px;
+    padding: 3px;
+}
+
+.bigVideoClass{
+    position: fixed;
+    background: rgba(0,0,0,0.9);
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.bigVideoClass .fa-xmark
+{
+    font-size: 25px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 10px 10px;
+    cursor: pointer;
+    z-index: 2;
+    color: #ffffff;
+}
+
+.bigVideoClass .fa-xmark:hover{
+    background-color : rgba(255, 255, 255, 0.2);
+}
+
+.bigVideoClass .fa-play{
+    color: #33cccc;
+    z-index: 2;
+    position: absolute;
+    left: 50%;
+    font-size: 3em;
+    cursor: pointer;
+}
+
+.bigVideoClass .videoContain{
+    width: 80%;
+    height: 80%;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+}
+
+.bigVideoClass .videoContain video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bigVideoClass .videoContain .videoTools{
+   background: rgba(0,0,0,0.4);
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: 15px;
+}
+
+.bigVideoClass .videoContain .videoTools input[type=range]{
+    -webkit-appearance: none;
+    float: right;
+    margin: 10px;
+    background: transparent;
+}
+
+.bigVideoClass .videoContain .videoTools input[type= "range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    cursor: pointer;
+    background: #111;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.bigVideoClass .videoContain .videoTools input[type= "range"]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    background: #33cccc;
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    border-radius: 10px;
+}
+
+.bigVideoClass .videoContain .fa-regular{
+    color: #33cccc;
+    font-size: 2em;
+    margin: 10px;
+    cursor: pointer;
+}
+.bigVideoClass .videoContain .videoTools .fa-volume-high, .fa-volume-xmark, .fa-expand{
+    color: #33cccc;
+    float: right;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.bigVideoClass .videoContain .timeIndicatorContain{
+    width: 100%;
+    height: 10px;
+    background: rgba(0,0,0,0.8);
+    display: block;
+    cursor: pointer;
+}
+
+.bigVideoClass .videoContain .timeIndicatorContain .timeIndator{
+    background: #33cccc;
+    width: 0;
+    height: 100%;
+    display: block;
+    cursor: pointer;
+}
+
+.bigVideoClass .videoContain .videoTime{
+    background: #33cccc;
+    float: right;
+    margin: 10px;
+    font-size: 12px;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+/*-------------- Index-3 content --------------------*/
+
+.content{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard{
+    background-color: #ffffff;
+    width: 20%;
+    padding: 2vw;
+    color: rgb(57, 58, 58);
+}
+
+.dashboard .title{
+    font-size: 1vw;
+}
+
+.dashboard .title .fa-calendar-day{
+    font-size: 2vw;
+    margin: 0 1vw 0 0; 
+}
+
+.dashboard li{
+    list-style-type: none;
+    padding: 0.5vw;
+}
+
+.dashboard li a{
+    color: rgb(57, 58, 58);
+    cursor: pointer;
+}
+
+.dashboard li .fa-solid{
+    margin: 0 1vw;
+    font-size: 1vw;
+    color: rgb(57, 58, 58);
+}
+
+.dashboardcontent{
+    background-color: #33cccc;
+    width: 100%;
+    padding: 1vw;
+    border-top: 0.5vw solid #ffffff;
+    display: block;
+}
+
+.dashboardcontent .taskcontener
+{
+    display: flex;
+}
+
+.dashboardcontent .task{
+    background-color: rgb(250, 246, 246);
+    width: 25%;
+    margin: 0.5vw;
+    border-radius: 12px;
+    text-align: center;
+    padding: 1vw;
+}
+
+.dashboardcontent .task .fa-solid
+{
+    font-size: 2.5vw;
+}
+
+.dashboardcontent .task button
+{
+    background-color: orangered;
+    border: none;
+    color: white;
+    padding: 1vw;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.dashboardcontent .task button:hover{
+    transform: scale(0.9 ,0.9);
+    background-color: #e63d00;
+
+}
+
+.dashboardcontent .workdone
+{
+    background-color: rgb(250, 246, 246);
+    border-radius: 12px;
+    padding: 1vw;
+    margin: 0.5vw;
+}
+
+.dashboardcontent .workdone .work-p{
+    display: flex;
+}
+.dashboardcontent .workdone .work-p p{
+    margin: 0.5vw 0.5vw 0.5vw 0;
+}
+
+.dashboardcontent .workdone .progress{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboardcontent .workdone .progress button{
+    background: #111;
+    color: #ffffff;
+    border: none;
+    padding: 0.5vw;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.dashboardcontent .workdone .progress button:hover{
+    opacity: 0.7;
+}
+
+.dashboardcontent .workdone .progress span{
+    background: #ccebff;
+    width: 25%;
+    height: 90%;
+    margin: 1vw 1vw 1vw 0;
+    border-radius: 12px;
+    padding: 1vw
+}
+
+.dashboardcontent .workdone .progress .fa-solid{
+    float: right;
+    font-size: 5vw;
+    position: relative;
+    top: -3vw;
+}
+
+/*-------------- Index-4 content --------------------*/
+
+.container {
+   font-family: 'Lora', serif;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: rgb(251, 242, 133);
+  background: radial-gradient(
+    circle,
+    rgba(251, 242, 133, 0.6334908963585435) 0%,
+    rgba(224, 196, 91, 0.8407738095238095) 35%,
+    rgba(230, 224, 113, 1) 100%
+  );
+}
+
+.weather {
+  display: flex; 
+  align-items: center;
+  margin: 15px 0;
+  font-size: 1.5rem;
+}
+
+#location {
+  font-size: 3rem;
+  font-weight: 800;
+  font-style: italic;
+}
+.desc {
+  font-size: 1.25rem;
+  text-transform: capitalize;
+}
+
+.circle {
+  background-color: black;
+  border-radius: 50px;
+  height: 15px;
+  width: 15px;
+  margin: 0 15px;
+}
+
+@media (max-width: 800px) { 
+    .head p{
+        font-size: 5vw;
+    }
+
+    .hero-image{
+        height: 25%;
+    }
+
+    #hero-text{
+        font-size: 2em;
+    }
+
+    .head{
+        position: sticky;
+        top: 0;
+        z-index: 2;
+        background: #111;
+    }
+
+    ul{
+        display: none;
+        flex-direction: column;
+        z-index: 9;
+        position: fixed;
+        top: 10.7em;
+        width: 90%;
+        height: 100%;
+    }
+
+    li a .fa-regular, .fa-solid{
+        font-size: 24px;
+        display: block;
+    }
+
+    .fa-bars{
+        color: #ffffff;
+        padding: 5px;
+        font-size: 2em;
+        cursor: pointer;
+        position: sticky;
+        top: 4em;
+        background: #111;
+        z-index: 2;
+        width: 100%;
+        border-bottom: 1px dotted #33cccc;
+    }
+
+    .close{
+        color: #ffffff;
+        background: #33cccc;
+        text-align: center;
+        padding: 5px;
+        cursor: pointer;
+    }
+
+    .content-2{
+        flex-direction: column;
+    }
+
+    .content-2 div{
+        width: 90%;
+        margin: 2px;
+    }
+/*-----------------------------*/
+
+    .galley-content .nav{
+       z-index: 9;
+       width: 90%
+    }
+
+    .galley-content .content-index-2{
+        
+    }
+
+    .galley-content .content-index-2 img{
+        
+    }
+
+}
